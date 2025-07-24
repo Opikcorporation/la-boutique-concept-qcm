@@ -554,7 +554,7 @@
     </script>
     <script>
         // --- JavaScript (commence ici) ---
-        // Données du QCM (inchangées)
+        // Données du QCM (MODIFIÉES POUR LA QUESTION 4)
         const questions = [
             {
                 question: "Quel est le premier réflexe à avoir en arrivant sur un événement ?",
@@ -581,16 +581,17 @@
                     "Tu signales calmement à ton responsable et nettoies",
                     "Tu la caches sous la table"
                 ],
-                answer: "Tu signales calmement à ton responsable et nettoies"
+                answer: "Tu signales calmalescalmement à ton responsable et nettoies"
             },
             {
+                // QUESTION 4 - MODIFIÉE POUR LA COHÉRENCE DES GUILLEMETS
                 question: "Un client te dit qu’il est allergique au gluten, tu :",
                 options: [
                     "Lui sers du pain avec du foie gras pour être sympa",
-                    "Vas demander au chef ce qui est \"safe\" et tu l’informes clairement",
+                    "Vas demander au chef ce qui est \"safe\" et tu l’informes clairement", // Utilisation de guillemets droits
                     "Lui proposes une pizza"
                 ],
-                answer: "Vas demander au chef ce qui est \"safe\" et tu l’informes clairement"
+                answer: "Vas demander au chef ce qui est \"safe\" et tu l’informes clairement" // Utilisation de guillemets droits
             },
             {
                 question: "Tu ne reconnais pas la sauce sur une assiette, tu :",
@@ -943,7 +944,7 @@
         // Fonction pour afficher l'animation d'emojis
         function showEmojiRain() {
             const emojis = ['🎉', '✨', '🌟', '🥳', '✅', '👏', '🏆', '💯', '🚀']; // Plus d'emojis
-            emojiRainContainer.innerHTML = '';
+            emojiRainContainer.innerHTML = ''; // S'assurer que le conteneur est vide avant de générer de nouveaux emojis
             for (let i = 0; i < 60; i++) {
                 const emoji = document.createElement('span');
                 emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
@@ -954,9 +955,11 @@
             }
         }
 
-        // NOUVELLE FONCTION EMAILJS (MISES À JOUR AVEC VOS IDS)
+        // sendResultsByEmail (inchangée, mais le problème de `qcm_color` est résolu par la logique précédente)
         async function sendResultsByEmail(userEmail, userName, userLastName, score, totalQuestions, percentage, feedbackDetails) {
-            // Préparer les paramètres pour le template EmailJS
+            // Déterminer la couleur basée sur le statut
+            const qcmColor = percentage >= passingScorePercentage ? '#28a745' : '#dc3545'; // Vert pour Réussi, Rouge pour Échoué
+
             const templateParams = {
                 user_name: userName,
                 user_last_name: userLastName,
@@ -964,8 +967,22 @@
                 qcm_score: `${score} / ${totalQuestions}`,
                 qcm_percentage: `${percentage.toFixed(2)}%`,
                 qcm_status: percentage >= passingScorePercentage ? 'Réussi' : 'Échoué',
-                feedback_array: feedbackDetails
+                feedback_array: feedbackDetails,
+                qcm_color: qcmColor // NOUVELLE VARIABLE AJOUTÉE ICI
             };
+
+            // Logs de vérification des paramètres EmailJS
+            console.log("------------------------------------------");
+            console.log("Vérification des paramètres EmailJS :");
+            console.log("user_name:", templateParams.user_name);
+            console.log("user_last_name:", templateParams.user_last_name);
+            console.log("user_email:", templateParams.user_email);
+            console.log("qcm_score:", templateParams.qcm_score);
+            console.log("qcm_percentage:", templateParams.qcm_percentage);
+            console.log("qcm_status:", templateParams.qcm_status);
+            console.log("qcm_color:", templateParams.qcm_color);
+            console.log("feedback_array (nombre d'éléments):", templateParams.feedback_array ? templateParams.feedback_array.length : "null/undefined");
+            console.log("------------------------------------------");
 
             try {
                 // Envoyer l'e-mail à l'utilisateur
@@ -991,7 +1008,6 @@
                 alert("Erreur lors de l'envoi des résultats par e-mail. Veuillez réessayer plus tard.");
             }
         }
-        // FIN NOUVELLE FONCTION EMAILJS
 
         // Logique de soumission du QCM
         function submitQuiz() {
@@ -1060,10 +1076,9 @@
                 resultDiv.classList.remove('pass');
                 resultDiv.classList.add('fail');
                 resultDiv.innerHTML += `<p>Désolé ${userData.firstName}, vous n'avez pas atteint le score requis de ${passingScorePercentage}%. Veuillez réviser et réessayer.</p>`;
-                emojiRainContainer.innerHTML = '';
+                emojiRainContainer.innerHTML = ''; // S'assurer que les emojis sont bien nettoyés si échec
             }
 
-            // APPEL MODIFIÉ POUR EMAILJS
             sendResultsByEmail(userData.email, userData.firstName, userData.lastName, score, totalQuestions, percentage, feedbackDetails);
 
             resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1128,12 +1143,21 @@
         });
 
         retryQuizButton.addEventListener('click', () => {
+            // Problème 1 : Correction de la réinitialisation au "Réessayer le QCM"
             quizContentDiv.style.display = 'none';
             registrationFormDiv.style.display = 'block';
+            
             // Réinitialiser les champs du formulaire d'inscription
             userInfoForm.reset();
             // Supprimer les classes d'erreur
             document.querySelectorAll('.form-group').forEach(group => group.classList.remove('has-error'));
+
+            // Nettoyer les emojis
+            emojiRainContainer.innerHTML = ''; 
+
+            // Réinitialiser la barre de progression
+            progressBar.style.width = '0%';
+            progressText.textContent = `Question 0 sur ${questions.length}`; // Remettre le texte initial
         });
 
         // Initialisation
