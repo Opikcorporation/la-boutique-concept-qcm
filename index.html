@@ -557,322 +557,192 @@
         // --- JavaScript (commence ici) ---
         // Données du QCM (MODIFIÉES POUR LA QUESTION 4)
         const questions = [
-            {
-                question: "Quel est le premier réflexe à avoir en arrivant sur un événement ?",
-                options: [
-                    "Prendre un café et checker Instagram",
-                    "Aller dire bonjour au chef de cuisine et aux mariés",
-                    "Se présenter au responsable d’équipe et vérifier les consignes"
-                ],
-                answer: "Se présenter au responsable d’équipe et vérifier les consignes"
-            },
-            {
-                question: "Quelle est la tenue correcte exigée ?",
-                options: [
-                    "T-shirt noir et pantalon de sport",
-                    "Noir complet, chemise, pantalon propre, chaussures noires fermées",
-                    "Tout blanc pour ressembler aux chefs"
-                ],
-                answer: "Noir complet, chemise, pantalon propre, chaussures noires fermées"
-            },
-            {
-                question: "Si tu fais tomber une assiette :",
-                options: [
-                    "Tu rigoles et tu dis à la mariée que c'était un test",
-                    "Tu signales calmement à ton responsable et nettoies",
-                    "Tu la caches sous la table"
-                ],
-                answer: "Tu signales calmement à ton responsable et nettoies"
-            },
-            {
-                question: "Un client te dit qu’il est allergique au gluten, tu :",
-                options: [
-                    "Lui sers du pain avec du foie gras pour être sympa",
-                    "Vas demander au chef ce qui est safe et tu l’informes clairement", 
-                    "Lui proposes une pizza"
-                ],
-                answer: "Vas demander au chef ce qui est safe et tu l’informes clairement" 
-            },
-            {
-                question: "Tu ne reconnais pas la sauce sur une assiette, tu :",
-                options: [
-                    "Inventes un nom",
-                    "Vas discrètement demander en cuisine",
-                    "Dégustes l’assiette dressée pour vérifier"
-                ],
-                answer: "Vas discrètement demander en cuisine"
-            },
-            {
-                question: "Quelle attitude adopter pendant le service ?",
-                options: [
-                    "Discret, efficace, à l’écoute du client",
-                    "Brillant, bruyant, ultra présent",
-                    "Bras croisés, regard dans le vide"
-                ],
-                answer: "Discret, efficace, à l’écoute du client"
-            },
-            {
-                question: "Tu dois porter 3 assiettes :",
-                options: [
-                    "Une dans chaque main, une sur la tête",
-                    "Tu t’exerces pendant la formation pour être à l’aise",
-                    "Tu refuses, ce n’est pas dans ta fiche de poste"
-                ],
-                answer: "Tu t’exerces pendant la formation pour être à l’aise"
-            },
-            {
-                question: "Un invité te demande un cocktail, mais tu ne sais pas s’il y en a :",
-                options: [
-                    "Tu inventes une recette maison",
-                    "Tu demandes au barman ou au responsable",
-                    "Tu réponds : \"je suis serveur, pas mixologue\""
-                ],
-                answer: "Tu demandes au barman ou au responsable"
-            },
-            {
-                question: "Une table attend depuis 10 minutes, tu :",
-                options: [
-                    "Tu passes ton chemin, ce n’est pas ta rangée",
-                    "Tu y vas directement, tu les informes et t’excuses",
-                    "Tu attends que quelqu’un d’autre s’en occupe"
-                ],
-                answer: "Tu y vas directement, tu les informes et t’excuses"
-            },
-            {
-                question: "Tu as fini ton rôle, mais tu vois un collègue débordé :",
-                options: [
-                    "Tu l’aides immédiatement",
-                    "Tu vas chercher ton GSM",
-                    "Tu dis que tu as fini ta partie"
-                ],
-                answer: "Tu l’aides immédiatement"
-            },
-            {
-                question: "Ton téléphone sonne pendant le service :",
-                options: [
-                    "Tu réponds discrètement sous la nappe",
-                    "Tu le mets sur silencieux dès le début du service",
-                    "Tu décroches devant les clients"
-                ],
-                answer: "Tu le mets sur silencieux dès le début du service"
-            },
-            {
-                question: "Tu entends un collègue parler mal du client :",
-                options: [
-                    "Tu ignores, ce n’est pas ton problème",
-                    "Tu lui dis calmement que ce n’est pas professionnel",
-                    "Tu rigoles avec lui pour détendre l’ambiance"
-                ],
-                answer: "Tu lui dis calmement que ce n’est pas professionnel"
-            },
-            {
-                question: "Quelle est la bonne distance pour poser une assiette devant un client ?",
-                options: [
-                    "À 5 cm du bord de table, alignée et centrée",
-                    "Posée au hasard, tant que ça ne tombe pas",
-                    "À 30 cm du bord pour l’effet \"surprise\""
-                ],
-                answer: "À 5 cm du bord de table, alignée et centrée"
-            },
-            {
-                question: "Ton nœud de tablier est mal fait :",
-                options: [
-                    "Tu le refais discrètement ou demandes de l’aide",
-                    "Tu le laisses, ça ne se voit pas trop",
-                    "Tu l’enlèves pour être plus à l’aise"
-                ],
-                answer: "Tu le refais discrètement ou demandes de l’aide"
-            },
-            {
-                question: "Tu dois expliquer un plat au client :",
-                options: [
-                    "Tu dis \"je ne sais pas, c’est du poisson je crois\"",
-                    "Tu te renseignes d’abord pour être sûr",
-                    "Tu inventes un nom pour faire classe"
-                ],
-                answer: "Tu te renseignes d’abord pour être sûr"
-            },
-            {
-                question: "Que faire si tu n’as rien à faire sur le moment ?",
-                options: [
-                    "Rester immobile dans un coin discret",
-                    "Observer la salle et anticiper les besoins",
-                    "Aller te poser dehors 5 min"
-                ],
-                answer: "Observer la salle et anticiper les besoins"
-            },
-            {
-                question: "Un client semble mécontent :",
-                options: [
-                    "Tu l’ignores",
-                    "Tu restes calme, tu l’écoutes et tu informes le responsable",
-                    "Tu lui proposes une part de gâteau pour le calmer"
-                ],
-                answer: "Tu restes calme, tu l’écoutes et tu informes le responsable"
-            },
-            {
-                question: "Pendant une pause :",
-                options: [
-                    "Tu restes visible, mange et bois au milieu des invités",
-                    "Tu vas dans un endroit prévu, discrètement",
-                    "Tu prends ton assiette et rejoins les clients"
-                ],
-                answer: "Tu vas dans un endroit prévu, discrètement"
-            },
-            {
-                question: "Que dois-tu faire à la fin de ton service ?",
-                options: [
-                    "Nettoyer et ranger sans attendre",
-                    "Partir sans prévenir, tu as fini",
-                    "Attendre qu’on te libère, puis filer"
-                ],
-                answer: "Nettoyer et ranger sans attendre"
-            },
-            {
-                question: "Quelle est la règle sur les allergies ?",
-                options: [
-                    "Toujours vérifier avec la cuisine",
-                    "Faire confiance à ton intuition",
-                    "Dire que tu penses que ça va aller"
-                ],
-                answer: "Toujours vérifier avec la cuisine"
-            },
-            {
-                question: "Peut-on mâcher du chewing-gum en service ?",
-                options: [
-                    "Oui, si on ne parle pas",
-                    "Non, jamais",
-                    "Oui, si c’est de la menthe"
-                ],
-                answer: "Non, jamais"
-            },
-            {
-                question: "Peut-on porter des baskets ?",
-                options: [
-                    "Oui, surtout si elles sont stylées",
-                    "Non, il faut des chaussures fermées, propres, noires",
-                    "Oui, si tu es en Bronze ou plus"
-                ],
-                answer: "Non, il faut des chaussures fermées, propres, noires"
-            },
-            {
-                question: "Le dress code est :",
-                options: [
-                    "Imposé et professionnel",
-                    "Facultatif si on est bien habillé",
-                    "Adapté au thème du mariage (costume disco ?)"
-                ],
-                answer: "Imposé et professionnel"
-            },
-            {
-                question: "Peut-on publier une photo de l’événement ?",
-                options: [
-                    "Oui, si on est bien coiffé",
-                    "Non, sauf si autorisation du client et du responsable",
-                    "Oui, en taguant la Boutique"
-                ],
-                answer: "Non, sauf si autorisation du client et du responsable"
-            },
-            {
-                question: "Tu arrives en retard :",
-                options: [
-                    "Tu préviens tout de suite, t’excuses sincèrement",
-                    "Tu fais semblant que ce n’est pas grave",
-                    "Tu ne dis rien, ils le verront bien"
-                ],
-                answer: "Tu préviens tout de suite, t’excuses sincèrement"
-            },
-            {
-                question: "Tu fais partie de l’équipe La Boutique, ça veut dire :",
-                options: [
-                    "Je viens pour l’argent et je pars",
-                    "Je représente une équipe, une image et une exigence",
-                    "Je fais mon truc dans mon coin"
-                ],
-                answer: "Je représente une équipe, une image et une exigence"
-            },
-            {
-                question: "Sur un buffet, que dois-tu surveiller en priorité ?",
-                options: [
-                    "L’alignement parfait des couverts",
-                    "Le réassort régulier et la propreté",
-                    "L’esthétique du nappage uniquement"
-                ],
-                answer: "Le réassort régulier et la propreté"
-            },
-            {
-                question: "Si un plat du buffet est vide :",
-                options: [
-                    "Tu attends qu’un client le remarque",
-                    "Tu avertis la cuisine ou le responsable immédiatement",
-                    "Tu retires le plat pour éviter les plaintes"
-                ],
-                answer: "Tu avertis la cuisine ou le responsable immédiatement"
-            },
-            {
-                question: "En service à l’assiette, comment se déplace un serveur ?",
-                options: [
-                    "Avec fluidité, sans se précipiter, à droite des clients",
-                    "En coupant au plus court pour gagner du temps",
-                    "En allant vite entre les tables, quitte à bousculer"
-                ],
-                answer: "Avec fluidité, sans se précipiter, à droite des clients"
-            },
-            {
-                question: "Que faire de ta main libre en servant ?",
-                options: [
-                    "La garder dans le dos ou le long du corps",
-                    "Tenir ton téléphone discrètement",
-                    "S’appuyer sur la table pour plus de stabilité"
-                ],
-                answer: "La garder dans le dos ou le long du corps"
-            },
-            {
-                question: "Une assiette n’est pas terminée, tu veux débarrasser :",
-                options: [
-                    "Tu demandes discrètement si la personne a terminé",
-                    "Tu l’enlèves pour éviter d’attendre",
-                    "Tu proposes directement un autre plat"
-                ],
-                answer: "Tu demandes discrètement si la personne a terminé"
-            },
-            {
-                question: "Que faire en fin de buffet ?",
-                options: [
-                    "Laisser les restes visibles pour que les clients se servent",
-                    "Réorganiser proprement, nettoyer et prévenir la cuisine",
-                    "Tout enlever en une fois pour faire plus de place"
-                ],
-                answer: "Réorganiser proprement, nettoyer et prévenir la cuisine"
-            },
-            {
-                question: "En service à table, on sert par :",
-                options: [
-                    "La gauche du client",
-                    "La droite du client",
-                    "L’arrière pour éviter de gêner"
-                ],
-                answer: "La droite du client"
-            },
-            {
-                question: "Quand débarrasser les verres ?",
-                options: [
-                    "Dès qu’ils sont à moitié vides",
-                    "Quand ils sont clairement terminés ou sur demande",
-                    "À la fin du repas, en même temps que les couverts"
-                ],
-                answer: "Quand ils sont clairement terminés ou sur demande"
-            },
-            {
-                question: "Quelle est la règle d’or du nettoyage final ?",
-                options: [
-                    "Nettoyer uniquement ton poste",
-                    "Laisser l’espace aussi propre qu’avant notre arrivée",
-                    "Partir dès que le client te dit merci"
-                ],
-                answer: "Laisser l’espace aussi propre qu’avant notre arrivée"
-            }
-        ];
+{
+    question: "Quelle est la tenue correcte exigée pour un service traiteur ?",
+    options: ['T-shirt noir et baskets noires, on reste casual', 'Tenue noire complète, chemise blanche propre, pantalon et chaussures fermées, chaussette noire', 'Chemise blanche avec nœud papillon (plus classe)'],
+    answer: "Tenue noire complète, chemise blanche propre, pantalon et chaussures fermées, chaussette noire"
+},
+{
+    question: "Peut-on porter des baskets en service ?",
+    options: ['Oui, surtout si elles sont stylées', 'Non, il faut des chaussures propres, fermées et noires', 'Oui, à partir du badge Argent'],
+    answer: "Non, il faut des chaussures propres, fermées et noires"
+},
+{
+    question: "Peut-on mâcher du chewing-gum en service ?",
+    options: ['Oui si tu ne parles pas aux clients', 'Non, jamais', 'Oui, si c’est un goût menthe discrète'],
+    answer: "Non, jamais"
+},
+{
+    question: "Que faire si ton nœud de tablier est mal fait ?",
+    options: ['Tu l’enlèves discrètement pour être plus à l’aise', 'Tu le refais correctement', 'Tu le caches sous ton tablier'],
+    answer: "Tu le refais correctement"
+},
+{
+    question: "Le dress code est :",
+    options: ['Imposé et professionnel', 'Adapté au thème du mariage (costume disco si demandé)', 'Libre tant que c’est propre'],
+    answer: "Imposé et professionnel"
+},
+{
+    question: "Quelle attitude adopter pendant le service ?",
+    options: ['Discret, efficace, à l’écoute', 'Dynamique et bavard, pour mettre l’ambiance', 'Bras croisés, en retrait'],
+    answer: "Discret, efficace, à l’écoute"
+},
+{
+    question: "Tu as fini ta mission, mais un collègue est débordé :",
+    options: ['Tu vas l’aider', 'Tu vas prendre ton GSM', 'Tu dis que tu as fini ton rôle'],
+    answer: "Tu vas l’aider"
+},
+{
+    question: "Tu entends un collègue critiquer un client :",
+    options: ['Tu rigoles avec lui pour détendre l’ambiance', 'Tu lui dis calmement que ce n’est pas pro', 'Tu fais comme si tu n’avais rien entendu'],
+    answer: "Tu lui dis calmement que ce n’est pas pro"
+},
+{
+    question: "Tu arrives en retard à un événement :",
+    options: ['Tu préviens tout de suite et tu t’excuses sincèrement', 'Tu dis que t’étais dans les embouteillages et tu fais comme si de rien n’était', 'Tu ne dis rien, ça passera'],
+    answer: "Tu préviens tout de suite et tu t’excuses sincèrement"
+},
+{
+    question: "Tu fais partie de l’équipe La Boutique, ça veut dire :",
+    options: ['Je suis là pour l’argent', 'Je représente une image, une exigence et une équipe', 'Je fais mon service perso dans mon coin'],
+    answer: "Je représente une image, une exigence et une équipe"
+},
+{
+    question: "Tu dois porter 3 assiettes :",
+    options: ['Une dans chaque main, une sur la tête', 'Tu t’exerces lors des formation pour maîtriser la technique', 'Tu refuses, ce n’est pas ta spécialité'],
+    answer: "Tu t’exerces lors des formation pour maîtriser la technique"
+},
+{
+    question: "Une assiette n’est pas finie mais tu veux débarrasser :",
+    options: ['Tu demandes discrètement si la personne a terminé', 'Tu l’enlèves vite pour faire avancer le service', 'Tu proposes déjà une autre assiette'],
+    answer: "Tu demandes discrètement si la personne a terminé"
+},
+{
+    question: "Quelle est la bonne distance pour poser une assiette ?",
+    options: ['5 cm du bord, centrée devant le client', 'Où il y a de la place', 'Le plus loin possible pour éviter de gêner'],
+    answer: "5 cm du bord, centrée devant le client"
+},
+{
+    question: "Que faire de ta main libre en servant ?",
+    options: ['La garder le long du corps ou derrière le dos', 'Tenir ton téléphone discret', 'T’appuyer sur la table pour te stabiliser'],
+    answer: "La garder le long du corps ou derrière le dos"
+},
+{
+    question: "En service à table, on sert par :",
+    options: ['La gauche', 'La droite', 'L’arrière, pour déranger le moins possible'],
+    answer: "La droite"
+},
+{
+    question: "Pendant le dessert, ton rôle est :",
+    options: ['Vérifier que tous les invités sont servis', 'Commencer à ranger ton poste discretos', 'T’asseoir à l’arrière et souffler un peu'],
+    answer: "Vérifier que tous les invités sont servis"
+},
+{
+    question: "Un client te dit qu’il est allergique au gluten :",
+    options: ['Tu lui proposes une pizza', 'Tu vas demander au chef ce qui est safe pour lui', 'Tu lui dis que normalement y en a pas'],
+    answer: "Tu vas demander au chef ce qui est safe pour lui"
+},
+{
+    question: "Tu ne reconnais pas la sauce sur l’assiette :",
+    options: ['Tu inventes un nom classe', 'Tu dois demander en cuisine en amont de tout le menu', 'Tu la goûtes pour vérifier'],
+    answer: "Tu dois demander en cuisine en amont de tout le menu"
+},
+{
+    question: "Tu dois expliquer un plat à un client :",
+    options: ['Tu dis c’est du poisson je crois', 'Tu te renseignes avant pour être sûr', 'Tu inventes une belle description'],
+    answer: "Tu te renseignes avant pour être sûr"
+},
+{
+    question: "Un invité te demande un cocktail et tu ne sais pas s’il y en a :",
+    options: ['Tu inventes une recette maison', 'Tu demandes au barman ou au responsable', 'Tu lui dis que tu ne gères pas ça'],
+    answer: "Tu demandes au barman ou au responsable"
+},
+{
+    question: "Un client semble mécontent :",
+    options: ['Tu l’ignores', 'Tu restes calme, tu l’écoutes, tu informes le responsable', 'Tu lui proposes un dessert en extra'],
+    answer: "Tu restes calme, tu l’écoutes, tu informes le responsable"
+},
+{
+    question: "Si tu n’as rien à faire à un moment du service :",
+    options: ['Tu vas dehors', 'Tu observes et tu anticipes', 'Tu restes debout à attendre'],
+    answer: "Tu observes et tu anticipes"
+},
+{
+    question: "Peut-on s’asseoir pendant le service ?",
+    options: ['Oui, si les clients sont assis', 'Non, sauf autorisation du responsable', 'Oui, si personne ne regarde'],
+    answer: "Non, sauf autorisation du responsable"
+},
+{
+    question: "Ton téléphone sonne en plein service :",
+    options: ['Tu décroches discrètement', 'Tu l’as mis sur silencieux dès le début', 'Tu réponds, c’est peut-être urgent'],
+    answer: "Tu l’as mis sur silencieux dès le début"
+},
+{
+    question: "Peut-on publier une photo de l’événement ?",
+    options: ['Oui, si on est bien coiffé', 'Non, sauf si le client et le responsable ont donné leur accord', 'Oui, en taguant La Boutique'],
+    answer: "Non, sauf si le client et le responsable ont donné leur accord"
+},
+{
+    question: "En cas de doute sur une consigne :",
+    options: ['Tu demandes au responsable', 'Tu improvises', 'Tu demandes à un collègue (même s’il improvise aussi)'],
+    answer: "Tu demandes au responsable"
+},
+{
+    question: "Un collègue ne connaît pas son poste :",
+    options: ['Tu lui dis démerde-toi', 'Tu l’aides à se repérer', 'Tu le laisses se débrouiller, c’est pas ton souci'],
+    answer: "Tu l’aides à se repérer"
+},
+{
+    question: "Sur un buffet, que dois-tu surveiller en priorité ?",
+    options: ['Le style du nappage', 'Le réassort et la propreté', 'L’alignement des couverts'],
+    answer: "Le réassort et la propreté"
+},
+{
+    question: "Si un plat du buffet est vide :",
+    options: ['Tu attends que les gens râlent', 'Tu préviens la cuisine ou le responsable afin de recharger', 'Tu retires le plat pour ne pas qu’on voie'],
+    answer: "Tu préviens la cuisine ou le responsable afin de recharger"
+},
+{
+    question: "En fin de buffet :",
+    options: ['Tu laisses les restes visibles', 'Tu réorganises proprement, nettoies et informes la cuisine', 'Tu retires tout d’un coup'],
+    answer: "Tu réorganises proprement, nettoies et informes la cuisine"
+},
+{
+    question: "Que faire en fin de service ?",
+    options: ['Nettoyer et ranger sans attendre', 'Partir sans prévenir', 'Attendre d’être libéré pour rentrer chez toi'],
+    answer: "Nettoyer et ranger sans attendre"
+},
+{
+    question: "Quelle est la règle d’or du nettoyage final ?",
+    options: ['Nettoyer ton poste', 'Laisser le lieu aussi propre qu’avant notre arrivée', 'Partir dès que le client dit merci'],
+    answer: "Laisser le lieu aussi propre qu’avant notre arrivée"
+},
+{
+    question: "Le papa de la mariée commence son discours :",
+    options: ['Tu continues doucement à débarrasser', 'Tu t’arrêtes et attends la fin du discours, même si ça bloque un peu', 'Tu débarrasses à l’arrière discrètement'],
+    answer: "Tu t’arrêtes et attends la fin du discours, même si ça bloque un peu"
+},
+{
+    question: "Un client te demande pourquoi il n’y a pas de viande halal :",
+    options: ['Tu lui dis que ça n’a pas été prévenu en amont', 'Tu écoutes sa remarque et tu informes calmement le responsable', 'Tu t’excuses et promets que la prochaine fois ce sera prévu'],
+    answer: "Tu écoutes sa remarque et tu informes calmement le responsable"
+},
+{
+    question: "Pendant le service, tu remarques un plat avec une cuisson ratée :",
+    options: ['Tu poses quand même pour ne pas bloquer', 'Tu ne sers pas, tu préviens la cuisine discrètement', 'Tu poses et tu vas te plaindre au chef après'],
+    answer: "Tu ne sers pas, tu préviens la cuisine discrètement"
+},
+{
+    question: "Tu es félicité par un client qui donne un pourboire à partager :",
+    options: ['Tu le prends, tu as bien bossé', 'Tu remercies et tu t’assures qu’il soit bien partagé avec l’équipe', 'Tu refuses car tu trouves que ce n’est pas pro'],
+    answer: "Tu remercies et tu t’assures qu’il soit bien partagé avec l’équipe"
+},
+{
+    question: "Il manque une assiette pendant un service à 150 personnes :",
+    options: ['Tu fais comme si tu n’avais rien vu', 'Tu gardes ton calme, tu fais remonter au chef sans alerter les clients', 'Tu t’énerve car tout était prêt'],
+    answer: "Tu gardes ton calme, tu fais remonter au chef sans alerter les clients"
+}
+];
 
         // Éléments du DOM
         const registrationFormDiv = document.getElementById('registrationForm');
